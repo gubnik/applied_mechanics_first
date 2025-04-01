@@ -1,0 +1,58 @@
+\documentclass[12pt]{article} % or report
+\usepackage{fontspec}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{polyglossia}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{authblk}
+\usepackage{pgfplots}
+
+\setdefaultlanguage{russian}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {}
+  {0pt}
+  {\Huge}
+
+\setmainfont{Times New Roman}
+
+\title{Домашнее задание по прикладной механике}
+\date{29.03.25}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace{0.8cm}
+    \Large
+    Московский Государственный Технический Университет имени Николая Эрнестовича Баумана\\
+
+    \vspace*{3cm}
+
+    \Huge
+    \textbf{Движение материальной точки}
+
+    \vspace{0.5cm}
+    \LARGE
+    Выполнено бригадой №3 группы РК6-43Б
+
+    \vspace{2.5cm}
+    \large
+    Николай Губанков\\Андрей Чабанов\\Федор Дворкин\\Елизавета Бабенкова\\Егор Швайковский\\Анна Калинина
+
+    \vfill
+    Апрель 2025 г.
+\end{titlepage}
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\include{task}
+\clearpage
+\include{cartesian}
+
+\end{document}
