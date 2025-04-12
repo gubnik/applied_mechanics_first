@@ -1,0 +1,116 @@
+\section{Полярные координаты}
+
+\textbf{Условие:}
+\begin{enumerate}
+    \item Найти скорость и ускорение в момент времени \(t\).
+    \item Найти радиус кривизны и кривизну траектории точки в момент времени \(t\).
+\end{enumerate}
+
+Рассматривается система:
+\[
+\begin{cases}
+x(t) = -4t^2 + 1, \\
+y(t) = 8 - 3t, \\
+t = 0{,}5 = \frac{1}{2}
+\end{cases}
+\]
+
+\subsection{Нахождение скорости и ускорения}
+
+В полярных координатах \((r,\varphi)\) имеем:
+\[
+r = \sqrt{x^2 + y^2}, 
+\quad
+\varphi(t) = \arctg\!\Bigl(\frac{y}{x}\Bigr).
+\]
+
+Тогда
+\[
+r(t) = \sqrt{16t^4 - 8t^2 + 1 + 64 - 48t + 9t^2} 
+      = \sqrt{16t^4 + t^2 - 48t + 65}.
+\]
+При \(t = \tfrac12\):
+\[
+r\bigl(\tfrac12\bigr) 
+= \sqrt{1 + \tfrac14 - 24 + 65}
+= \sqrt{42{,}25}
+= 6{,}5.
+\]
+
+Аналогично,
+\[
+\varphi(t) = \arctg\!\Bigl(\tfrac{8 - 3t}{-4t^2 + 1}\Bigr), 
+\quad
+\varphi\bigl(\tfrac12\bigr) 
+= \arctg\!\Bigl(\tfrac{8 - \tfrac32}{-4\cdot\bigl(\tfrac12\bigr)^2 + 1}\Bigr)
+\to \infty.
+\]
+
+Производные:
+\[
+x'(t) = -8t,
+\quad
+y'(t) = -3.
+\]
+В полярном виде:
+\[
+V_r = \dot{r} = \frac{x x' + y y'}{r},
+\quad
+V_\varphi = r \dot{\varphi},
+\quad
+v = \sqrt{V_r^2 + V_\varphi^2}.
+\]
+
+Подставляя \(t=\tfrac12\), получаем:
+\[
+V_r\bigl(\tfrac12\bigr) 
+= \frac{\bigl(-4(\tfrac12)^2 + 1\bigr)(-4) + \bigl(8 - \tfrac32\bigr)(-3)}{6{,}5}
+= \frac{-19{,}5}{6{,}5} = -3,
+\]
+\[
+\dot{\varphi}\bigl(\tfrac12\bigr) 
+= \frac{x\,y' - y\,x'}{r^2}
+= \frac{0 - \bigl(8 - \tfrac32\bigr)\bigl(-8\cdot\tfrac12\bigr)}{(6{,}5)^2}
+\approx 0{,}61538,
+\]
+\[
+V_\varphi\bigl(\tfrac12\bigr) 
+= 6{,}5 \times 0{,}61538
+\approx 4,
+\]
+\[
+v\bigl(\tfrac12\bigr) 
+= \sqrt{(-3)^2 + 4^2}
+= 5.
+\]
+
+Для ускорения \(a = \sqrt{a_r^2 + a_\varphi^2}\) используем формулы:
+\[
+a_r = \ddot{r} - r \dot{\varphi}^2,
+\quad
+a_\varphi = 2\,\dot{r}\,\dot{\varphi} + r\,\ddot{\varphi}.
+\]
+Конечные вычисления дают:
+\[
+a_r\bigl(\tfrac12\bigr) = 0,
+\quad
+a_\varphi\bigl(\tfrac12\bigr) = 8,
+\quad
+a\bigl(\tfrac12\bigr) = 8.
+\]
+
+\subsection{Кривизна}
+
+Кривизна \(K\) связана с радиусом кривизны \(\rho\) соотношением \(K = \tfrac{1}{\rho}\).  
+Нормальное ускорение \(\lvert a_n \rvert = \tfrac{v^2}{\rho}\).  
+Из формулы в декартовых координатах:
+\[
+K 
+= \frac{x'y'' - x''y'}{\bigl(x'^2 + y'^2\bigr)^{3/2}},
+\]
+подставляя \(x'(t)=-8t,\; x''(t)=-8,\; y'(t)=-3,\; y''(t)=0,\) при \(t=\tfrac12\) получаем:
+\[
+K = \frac{24}{125} \approx 0{,}192,
+\quad
+\rho = \frac{1}{K} \approx 5{,}2.
+\]

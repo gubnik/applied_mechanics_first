@@ -1,0 +1,38 @@
+\section{Траектория}
+Для нахождения траектории необходимо выразить $y(x)$ через
+выражение $t(x)$ из $x(t)$ и подстановку в $y(t)$.
+
+Выразим $t(x)$:\\
+\begin{align}
+    x(t) &= -4t^{2} + 1 \Rightarrow -4t^{2} = x - 1 \\
+    t(x) &= \pm\sqrt{\frac{1-x}{4}} = \pm\frac{\sqrt{1 - x}}{2}
+\end{align}
+
+Так как отрицательное время не имеет физического смысла, берем
+положительный корень $t(x) = \frac{\sqrt{1 - x}}{2}$.
+Отсюда, выразим $y(t(x)) = y(x)$:\\
+\begin{align}
+    y(t(x)) &= 8 - 3t(x) \Rightarrow
+    y(x) = 8 - \frac{3\sqrt{1 - x}}{2}
+\end{align}
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            title = {Траектория $y(x)$},
+            xlabel = {$x$},
+            ylabel = {$y$},
+            grid = major,
+            xmin = -10, xmax = 1,
+            ymin = 0, ymax = 15,
+            domain=-10:1,
+            samples=100,
+            ]
+            \addplot[blue, thick]{8 - (3/2)*sqrt(1 - x)};
+            \addplot[dotted, thick]{8};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+
